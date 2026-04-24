@@ -4,7 +4,7 @@ Simple pagination
 """
 
 import csv
-from typing import List, tuple
+from typing import List, Tuple
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """Return a tuple containing start and end index for pagination"""
@@ -17,7 +17,7 @@ def index_range(page: int, page_size: int) -> Tuple[int, int]:
 
 class Server:
     """Server class to paginate a database of popular baby names"""
-    DATA_FILE = "Popular_Baby_Names.cvs"
+    DATA_FILE = "Popular_Baby_Names.csv"
 
     def __init__(self):
         self.__dataset = None
@@ -26,9 +26,9 @@ class Server:
         """Dataset in cache"""
         if self.__dataset is None:
             with open(self.DATA_FILE) as f:
-                reader = cvs.reader(f)
+                reader = csv.reader(f)
                 dataset = [row for row in reader]
-            self.dataset = dataset[1:]
+            self.__dataset = dataset[1:]
 
         return self.__dataset
 
