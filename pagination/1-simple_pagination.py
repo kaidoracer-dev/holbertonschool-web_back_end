@@ -3,6 +3,7 @@
 Simple pagination
 """
 
+
 import csv
 from typing import List, Tuple
 
