@@ -1,12 +1,7 @@
 #!/usr/bin/env python3
-
-"""
-Modulo contains function list_all
-"""
+"""Module that lists all documents in a collection."""
 
 
 def list_all(mongo_collection):
-    """
-    return list(mongo_collection.find())
-    """
-    Returns all documents in a collection.
+    """Return a list of all documents in the collection."""
+    return list(mongo_collection.find()) or []
