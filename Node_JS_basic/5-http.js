@@ -20,14 +20,11 @@ const app = http.createServer((req, res) => {
     countStudents(database)
       .then(() => {
         console.log = originalLog;
-        res.end(`This is the list of our students
-${logs.join('
-')}`);
+        res.end(`This is the list of our students\n${logs.join('\n')}`);
       })
       .catch((err) => {
         console.log = originalLog;
-        res.end(`This is the list of our students
-${err.message}`);
+        res.end(`This is the list of our students\n${err.message}`);
       });
   }
 });

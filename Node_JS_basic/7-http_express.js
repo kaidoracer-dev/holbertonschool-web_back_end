@@ -17,14 +17,11 @@ app.get('/students', (req, res) => {
   countStudents(database)
     .then(() => {
       console.log = originalLog;
-      res.send(`This is the list of our students
-${logs.join('
-')}`);
+      res.send(`This is the list of our students\n${logs.join('\n')}`);
     })
     .catch((err) => {
       console.log = originalLog;
-      res.send(`This is the list of our students
-${err.message}`);
+      res.send(`This is the list of our students\n${err.message}`);
     });
 });
 
