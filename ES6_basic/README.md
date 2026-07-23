@@ -24,7 +24,6 @@ This project covers the basics of ES6 (ECMAScript 2015) in JavaScript.
 | 0-constants.js | const or let |
 | 1-block-scoped.js | Block scope |
 | 2-arrow.js | Arrow functions |
-| 3-default-parameter.js | Parameter defaults |
 | 4-rest-parameter.js | Rest parameter |
 | 5-spread-operator.js | Spread syntax |
 | 6-string-interpolation.js | Template literals |
